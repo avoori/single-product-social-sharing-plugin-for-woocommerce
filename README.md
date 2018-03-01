@@ -136,7 +136,7 @@ You may also reach our development team directly by contacting us in one of foll
 ```
 [v1.0.2] ----------> 01 - 03 - 2018
 ```
----
+
 ##### Added
 - Improved support for proffesional version.
 
@@ -146,7 +146,7 @@ You may also reach our development team directly by contacting us in one of foll
 ```
 [v1.0.1] ----------> 01 - 03 - 2018
 ```
----
+
 ##### Added
 - Translations.
 - Active callback checks.
@@ -161,7 +161,7 @@ You may also reach our development team directly by contacting us in one of foll
 ```
 [v1.0.0] ----------> 28 - 02 - 2018
 ```
----
+
 
 ##### Added
 - Initial project upload.
