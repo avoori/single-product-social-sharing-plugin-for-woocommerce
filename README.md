@@ -109,7 +109,7 @@ You may also reach our development team directly by contacting us in one of foll
 ### Professional Version
 
 The professional version of the plugin adds many more options to the customizer settings:
-Title Styling:
+   * Title Styling:
 - Title Text Heading (H1,H2,H3)
 - Title Text Color
 - Title Text Margins (px)
