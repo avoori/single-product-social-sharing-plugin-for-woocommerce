@@ -67,26 +67,24 @@ Additional options and settings are available directly in the customizer in the 
 .avoo-social-share-fb > a > i {background-color: #3b5998 !important;}
 ```
 
----
-
 #### How to change the blocks background hover color with CSS
 > Change the first class to represent the relevant button.
 ```css
 .avoo-social-share-fb > a > i:hover {background-color: #3b5998 !important;}
 ```
 
----
-
-
 #### How to remove the blocks background and use a border instead with CSS
+> Change the first class to represent the relevant button.
+> Notice you need to provide 2 color options as the button is now transparent.
+> Change the border curvature, with the last setting as required.
 ```css
-.woocommerce.single-product div.product .avoo-social-share-buttons > span > a >i {
+.avoo-social-share-fb > a >i {
     background-color: transparent !important;
     border: 2px solid;
-}
-.avoo-social-share-fb > a > i {
+    line-height: 38px !important;
     border-color: #3b5998 !important;
     color: #3b5998 !important;
+    border-radius: 8px;
 }
 ```
 
