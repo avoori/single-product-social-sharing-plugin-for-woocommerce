@@ -41,10 +41,11 @@ This is a minimal social sharing solution that allows you to automatically inser
 > Single Product Social Sharing Plugin for Woocommerce will add a new customizer section called “Product Social Sharing”. Here you are able to configure all the plugin settings.
 
 ### Features
-
-**Requires at least:** WordPress 4.4  
-**Tested up to:** WordPress 4.9.4  
-**Version tag:** 1.2.7  
+```HTML
+Requires at least: WordPress 4.4  
+Tested up to: WordPress 4.9.4
+Version tag: 1.2.7  
+```
 
 ![Recordit GIF](http://g.recordit.co/kWJFgJd4pD.gif)
 
