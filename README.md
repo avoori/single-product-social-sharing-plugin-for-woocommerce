@@ -17,9 +17,9 @@ This is a minimal social sharing solution that allows you to automatically inser
 * [FAQ](#faq)
 * [Contributing](#contributing)
 * [Modification Examples](#modifications)
-  * How to change the blocks background color with CSS
-  * How to change the blocks background hover color with CSS
-  * How to remove the blocks background and use a border instead with CSS
+  * [How to change the blocks background color with CSS](#how-to-change-the-blocks-background-color-with-css)
+  * [How to change the blocks background hover color with CSS](#how-to-change-the-blocks-background-hover-color-with-css)
+  * [How to remove the blocks background and use a border instead with CSS](#how-to-remove-the-blocks-background-and-use-a-border-instead-with-css)
 * [Support](#support)
 * [License](#license)
 * [Professional Version](#pro-version)
@@ -106,7 +106,7 @@ You may also reach our development team directly by contacting us in one of foll
 ---
 
 
-### Professional-Version
+### Professional Version
 
 The professional version of the plugin adds many more options to the customizer settings:
 > Title:
