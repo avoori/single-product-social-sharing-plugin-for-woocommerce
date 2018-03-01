@@ -3,7 +3,7 @@
  * Plugin Name:			Product Social Share Buttons
  * Plugin URI:			https://capsula.group/plugins/single-product-social-sharing-plugin-for-woocommerce/
  * Description:			Add Social Share buttons for woocommerce products
- * Version:				1.0.1
+ * Version:				1.0.2
  * Author:				Capsula Group
  * Author URI:			https://capsula.group/
  * Requires at least:	4.5.0
@@ -34,7 +34,7 @@ Avoori_Product_Social_Sharing();
  * Main Avoori_Product_Social_Sharing Class
  *
  * @class Avoori_Product_Social_Sharing
- * @version	1.0.1
+ * @version	1.0.2
  * @since 1.0.0
  * @package	Avoori_Product_Social_Sharing
  */
@@ -82,7 +82,7 @@ final class Avoori_Product_Social_Sharing {
 		$this->token 				= 'avoo-product-social-sharing';
 		$this->plugin_url 			= plugin_dir_url( __FILE__ );
 		$this->plugin_path 			= plugin_dir_path( __FILE__ );
-		$this->version 				= '1.0.1';
+		$this->version 				= '1.0.2';
 
 		register_activation_hook( __FILE__, array( $this, 'install' ) );
 
@@ -232,7 +232,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_title_show',
-			'priority' 				=> 10,
+			'priority' 				=> 15,
 			'active_callback'		=> 'avoo_product_share_is_enabled',
 		) ) );
 
@@ -250,7 +250,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'text',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_title',
-			'priority' 				=> 10,
+			'priority' 				=> 15,
 			'active_callback'		=> 'avoo_product_share_and_title_is_enabled',
 		) ) );
 
@@ -268,7 +268,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_button_fb',
-			'priority' 				=> 10,
+			'priority' 				=> 20,
 			'active_callback'		=> 'avoo_product_share_is_enabled',
 		) ) );
 
@@ -286,7 +286,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_button_tw',
-			'priority' 				=> 10,
+			'priority' 				=> 25,
 			'active_callback'		=> 'avoo_product_share_is_enabled',
 		) ) );
 
@@ -304,7 +304,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_button_gp',
-			'priority' 				=> 10,
+			'priority' 				=> 30,
 			'active_callback'		=> 'avoo_product_share_is_enabled',
 		) ) );
 
@@ -322,7 +322,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_button_pi',
-			'priority' 				=> 10,
+			'priority' 				=> 35,
 			'active_callback'		=> 'avoo_product_share_is_enabled',
 		) ) );
 
@@ -340,7 +340,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_button_tu',
-			'priority' 				=> 10,
+			'priority' 				=> 40,
 			'active_callback'		=> 'avoo_product_share_is_enabled',
 		) ) );
 
@@ -358,7 +358,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_button_li',
-			'priority' 				=> 10,
+			'priority' 				=> 45,
 			'active_callback'		=> 'avoo_product_share_is_enabled',
 		) ) );
 
@@ -376,7 +376,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_button_em',
-			'priority' 				=> 10,
+			'priority' 				=> 50,
 			'active_callback'		=> 'avoo_product_share_is_enabled',
 		) ) );
 
@@ -394,7 +394,7 @@ final class Avoori_Product_Social_Sharing {
 			'type' 					=> 'text',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_email_title',
-			'priority' 				=> 10,
+			'priority' 				=> 50,
 			'active_callback'		=> 'avoo_product_share_and_email_is_enabled',
 		) ) );
 
