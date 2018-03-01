@@ -136,7 +136,7 @@ You may also reach our development team directly by contacting us in one of foll
 ---
 
 ```
----------- 01-03-2018 [v1.0.2] ----------
+---------- 01 - 03 - 2018 ---------- [v1.0.2]
 ```
 ##### Added
 - Improved support for proffesional version.
