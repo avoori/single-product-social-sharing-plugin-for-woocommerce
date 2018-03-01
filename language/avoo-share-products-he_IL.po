@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Product Social Share Buttons\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-01 08:42+0000\n"
+"PO-Revision-Date: 2018-03-01 08:44+0000\n"
+"Last-Translator: Gabi Berin <gabi@avoori.com>\n"
+"Language-Team: Hebrew\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Description of the plugin
+msgid "Add Social Share buttons for woocommerce products"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:231
+msgid "Add Title"
+msgstr ""
+
+#. Author of the plugin
+msgid "Avoori Team"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:375
+msgid "Email"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:393
+msgid "Email Body Text"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:214
+msgid "Enable Social Share Buttons"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:267
+msgid "Facebook"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:303
+msgid "Google Plus"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://avoori.com/"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:388
+#: includes/customizer-helper.php:126
+msgid "I saw this and thought about you!"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:357
+msgid "Linkedin"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:321
+msgid "Pinterest"
+msgstr ""
+
+#. Name of the plugin
+msgid "Product Social Share Buttons"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:199
+msgid "Product Social Sharing"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:249
+msgid "Title Text"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:339
+msgid "Tumblr"
+msgstr ""
+
+#: single-product-social-sharing-plugin-for-woocommerce.php:285
+msgid "Twitter"
+msgstr ""
+
+#: includes/customizer-helper.php:195
+msgid ""
+"Warning: Product Social Share Buttons will not be shown in the customizer. "
+"Please activate/install WooCommerce."
+msgstr ""

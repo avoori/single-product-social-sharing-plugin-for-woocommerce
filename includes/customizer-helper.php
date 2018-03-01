@@ -15,8 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-function avoo_product_share_is_enabled() {
-	return get_theme_mod( 'avoo_product_share_show', false );
+if ( ! function_exists( 'avoo_product_share_is_enabled' ) ) {
+
+	function avoo_product_share_is_enabled() {
+		return get_theme_mod( 'avoo_product_share_show', false );
+	}
+
 }
 
 /**
@@ -24,8 +28,48 @@ function avoo_product_share_is_enabled() {
  *
  * @since 1.0.0
  */
-function avoo_product_share_title_is_enabled() {
-	return get_theme_mod( 'avoo_product_share_title_show', false );
+if ( ! function_exists( 'avoo_product_share_title_is_enabled' ) ) {
+
+	function avoo_product_share_title_is_enabled() {
+		return get_theme_mod( 'avoo_product_share_title_show', false );
+	}
+
+}
+
+/**
+ * Check if product social buttons and buttons title is enabled
+ *
+ * @since 1.0.1
+ */
+if ( ! function_exists( 'avoo_product_share_and_title_is_enabled' ) ) {
+
+	function avoo_product_share_and_title_is_enabled() {
+
+		if ( avoo_product_share_is_enabled() && avoo_product_share_title_is_enabled() ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+}
+
+/**
+ * Check if product social buttons and email share is enabled
+ *
+ * @since 1.0.1
+ */
+if ( ! function_exists( 'avoo_product_share_and_email_is_enabled' ) ) {
+
+	function avoo_product_share_and_email_is_enabled() {
+
+		if ( avoo_product_share_is_enabled() && true == get_theme_mod( 'avoo_product_share_button_em', false ) ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }
 
 /**
@@ -33,61 +77,65 @@ function avoo_product_share_title_is_enabled() {
  *
  * @since 1.0.0
  */
-function avoo_add_product_share_buttons() {
+if ( ! function_exists( 'avoo_add_product_share_buttons' ) ) {
 
-	// Define Variables
-	global $post;
-	$product_share_title 	= get_theme_mod( 'avoo_product_share_title', '' );
-	$product_share 			= '<div class="avoo-social-share-buttons">';
+	function avoo_add_product_share_buttons() {
 
-	// Add a title based on user choice
-	if ( avoo_product_share_is_enabled() && avoo_product_share_title_is_enabled() && '' != $product_share_title ) {
-		$product_share.='<h3 class="avoo-social-share-title">'. $product_share_title .'</h3>';
-	}
+		// Define Variables
+		global $post;
+		$product_share_title 	= get_theme_mod( 'avoo_product_share_title', '' );
+		$product_share 			= '<div class="avoo-social-share-buttons">';
 
-	// Facebook
-	if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_fb', false ) ) {
-		$product_share.='<span class="avoo-social-share-fb"><a href="https://www.facebook.com/sharer/sharer.php?u='.get_permalink($post->ID).'" target="_blank"><i class="fa fa-facebook-f"></i></a></span>';
-	}
-
-	// Twitter
-	if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_tw', false ) ) {
-		$product_share.='<span class="avoo-social-share-tw"><a href="https://twitter.com/intent/tweet?source=webclient&amp;original_referer='.get_permalink($post->ID).'&amp;text='.get_the_title($post->ID).'&amp;url='.get_permalink($post->ID).'" target="_blank"><i class="fa fa-twitter"></i></a></span>';
-	}
-
-	// Google Plus
-	if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_gp', false ) ) {
-		$product_share.='<span class="avoo-social-share-gp"><a href="https://plus.google.com/share?url='.get_permalink($post->ID).'" target="_blank"><i class="fa fa-google-plus"></i></a></span>';
-	}
-
-	// Pinterest
-	if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_pi', false ) ) {
-		$product_share.='<span class="avoo-social-share-pi"><a href="http://pinterest.com/pin/create/bookmarklet/?media='.wp_get_attachment_url( get_post_thumbnail_id() ).'&amp;url='.get_permalink($post->ID).'&amp;title='.get_the_title($post->ID).'&amp;description='.get_the_title($post->ID).'" target="_blank"><i class="fa fa-pinterest-p"></i></a></span>';
-	}
-
-	// Tumblr
-	if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_tu', false ) ) {
-		$product_share.='<span class="avoo-social-share-tu"><a href="http://www.tumblr.com/share/link?url='.get_permalink($post->ID).'" target="_blank"><i class="fa fa-tumblr"></i></a></span>';
-	}
-
-	// Linkedin
-	if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_li', false ) ) {
-		$product_share.='<span class="avoo-social-share-li"><a href="https://www.linkedin.com/shareArticle?mini=true&url='.get_permalink($post->ID).'&title='.get_the_title($post->ID).'&summary=&source=" target="_blank"><i class="fa fa-linkedin"></i></a></span>';
-	}
-
-	// Email
-	if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_em', false ) ) {
-        $email_body_const   = esc_html__( 'I saw this and thought about you!', 'avoo-share-products' );
-        $email_title        = get_theme_mod( 'avoo_product_share_email_title' , $email_body_const );
-		if ( $email_body_const != $email_title ) {
-			$product_share.='<span class="avoo-social-share-em"><a href="mailto:?subject='.get_the_title($post->ID).'&amp;body='. $email_title .'%0D%0A' . get_permalink($post->ID) . '"><i class="fa fa-envelope"></i></a></span>';
-		} else {
-			$product_share.='<span class="avoo-social-share-em"><a href="mailto:?subject='.get_the_title($post->ID).'&amp;body='. $email_body_const .'%0D%0A' . get_permalink($post->ID) . '"><i class="fa fa-envelope"></i></a></span>';
+		// Add a title based on user choice
+		if ( avoo_product_share_is_enabled() && avoo_product_share_title_is_enabled() && '' != $product_share_title ) {
+			$product_share.='<h3 class="avoo-social-share-title">'. $product_share_title .'</h3>';
 		}
+
+		// Facebook
+		if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_fb', false ) ) {
+			$product_share.='<span class="avoo-social-share-fb"><a href="https://www.facebook.com/sharer/sharer.php?u='.get_permalink($post->ID).'" target="_blank"><i class="fa fa-facebook-f"></i></a></span>';
+		}
+
+		// Twitter
+		if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_tw', false ) ) {
+			$product_share.='<span class="avoo-social-share-tw"><a href="https://twitter.com/intent/tweet?source=webclient&amp;original_referer='.get_permalink($post->ID).'&amp;text='.get_the_title($post->ID).'&amp;url='.get_permalink($post->ID).'" target="_blank"><i class="fa fa-twitter"></i></a></span>';
+		}
+
+		// Google Plus
+		if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_gp', false ) ) {
+			$product_share.='<span class="avoo-social-share-gp"><a href="https://plus.google.com/share?url='.get_permalink($post->ID).'" target="_blank"><i class="fa fa-google-plus"></i></a></span>';
+		}
+
+		// Pinterest
+		if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_pi', false ) ) {
+			$product_share.='<span class="avoo-social-share-pi"><a href="http://pinterest.com/pin/create/bookmarklet/?media='.wp_get_attachment_url( get_post_thumbnail_id() ).'&amp;url='.get_permalink($post->ID).'&amp;title='.get_the_title($post->ID).'&amp;description='.get_the_title($post->ID).'" target="_blank"><i class="fa fa-pinterest-p"></i></a></span>';
+		}
+
+		// Tumblr
+		if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_tu', false ) ) {
+			$product_share.='<span class="avoo-social-share-tu"><a href="http://www.tumblr.com/share/link?url='.get_permalink($post->ID).'" target="_blank"><i class="fa fa-tumblr"></i></a></span>';
+		}
+
+		// Linkedin
+		if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_li', false ) ) {
+			$product_share.='<span class="avoo-social-share-li"><a href="https://www.linkedin.com/shareArticle?mini=true&url='.get_permalink($post->ID).'&title='.get_the_title($post->ID).'&summary=&source=" target="_blank"><i class="fa fa-linkedin"></i></a></span>';
+		}
+
+		// Email
+		if ( avoo_product_share_is_enabled() && get_theme_mod( 'avoo_product_share_button_em', false ) ) {
+			$email_body_const   = esc_html__( 'I saw this and thought about you!', 'avoo-share-products' );
+			$email_title        = get_theme_mod( 'avoo_product_share_email_title' , $email_body_const );
+			if ( $email_body_const != $email_title ) {
+				$product_share.='<span class="avoo-social-share-em"><a href="mailto:?subject='.get_the_title($post->ID).'&amp;body='. $email_title .'%0D%0A' . get_permalink($post->ID) . '"><i class="fa fa-envelope"></i></a></span>';
+			} else {
+				$product_share.='<span class="avoo-social-share-em"><a href="mailto:?subject='.get_the_title($post->ID).'&amp;body='. $email_body_const .'%0D%0A' . get_permalink($post->ID) . '"><i class="fa fa-envelope"></i></a></span>';
+			}
+		}
+
+		$product_share.='<div style="clear:both"></div></div>';
+		echo $product_share;
 	}
 
-	$product_share.='<div style="clear:both"></div></div>';
-	echo $product_share;
 }
 
 /**
@@ -95,23 +143,58 @@ function avoo_add_product_share_buttons() {
  *
  * @since 1.0.0
  */
-function avoo_product_share_footer_meta() {
-	if ( get_theme_mod( 'avoo_product_share_button_tw', false ) ) {
-		echo '<!-- Twitter Card data -->
-			<meta name="twitter:card" content="summary">
-			<meta name="twitter:title" content="'.get_the_title($post->ID).'">
-			<meta name="twitter:description" content="'.get_the_excerpt($post->ID).'">
-			<!-- Twitter Summary card images must be at least 120x120px -->
-			<meta name="twitter:image" content="'.wp_get_attachment_url( get_post_thumbnail_id() ).'">
+if ( ! function_exists( 'avoo_product_share_footer_meta' ) ) {
+
+	function avoo_product_share_footer_meta() {
+		if ( get_theme_mod( 'avoo_product_share_button_tw', false ) ) {
+			echo '<!-- Twitter Card data -->
+				<meta name="twitter:card" content="summary">
+				<meta name="twitter:title" content="'.get_the_title($post->ID).'">
+				<meta name="twitter:description" content="'.get_the_excerpt($post->ID).'">
+				<!-- Twitter Summary card images must be at least 120x120px -->
+				<meta name="twitter:image" content="'.wp_get_attachment_url( get_post_thumbnail_id() ).'">
+				';
+		}
+		if ( get_theme_mod( 'avoo_product_share_button_gp', false ) ) {
+			echo '<!-- Schema.org markup for Google+ -->
+			<meta itemprop="name" content="'.get_the_title($post->ID).'">
+			<meta itemprop="description" content="'.get_the_excerpt($post->ID).'">
+			<meta itemprop="image" content="'.wp_get_attachment_url( get_post_thumbnail_id() ).'">
 			';
+		}	
 	}
-	if ( get_theme_mod( 'avoo_product_share_button_gp', false ) ) {
-		echo '<!-- Schema.org markup for Google+ -->
-		  <meta itemprop="name" content="'.get_the_title($post->ID).'">
-		  <meta itemprop="description" content="'.get_the_excerpt($post->ID).'">
-		  <meta itemprop="image" content="'.wp_get_attachment_url( get_post_thumbnail_id() ).'">
-		  ';
-	}	
+
+}
+
+/**
+ * Check if woocommerce is active
+ *
+ * @since 1.0.1
+ */
+if ( ! function_exists( 'avoo_is_woocommerce_active' ) ) {
+
+	function avoo_is_woocommerce_active() {
+		if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+}
+
+/**
+ * Output Warning when woocommerce is not active
+ *
+ * @since 1.0.1
+ */
+if ( ! function_exists( 'avoo_admin_notice_woo_not_active' ) ) {
+
+	function avoo_admin_notice_woo_not_active() {
+		//<p><?php esc_html__( 'Single Product Social Sharing will not be shown in the customizer.', 'avoo-share-products' ); </p>
+		echo '<div id="message" class="notice notice-warning is-dismissible"><p>'. esc_html__( 'Warning: Product Social Share Buttons will not be shown in the customizer. Please activate/install WooCommerce.', 'avoo-share-products' ) .'</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>';
+	}
+
 }
 
 /**
@@ -119,6 +202,10 @@ function avoo_product_share_footer_meta() {
  *
  * @since 1.0.0
  */
-function avoo_sanitize_checkbox( $input ){
-    return ( ( isset( $input ) && true == $input ) ? true : false );
+if ( ! function_exists( 'avoo_sanitize_checkbox' ) ) {
+
+	function avoo_sanitize_checkbox( $input ){
+		return ( ( isset( $input ) && true == $input ) ? true : false );
+	}
+
 }

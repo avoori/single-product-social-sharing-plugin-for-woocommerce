@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:			Product Social Share Buttons
- * Plugin URI:			https://avoori.com/
+ * Plugin URI:			https://capsula.group/plugins/single-product-social-sharing-plugin-for-woocommerce/
  * Description:			Add Social Share buttons for woocommerce products
- * Version:				1.0.0
- * Author:				Avoori Team
- * Author URI:			https://avoori.com/
+ * Version:				1.0.1
+ * Author:				Capsula Group
+ * Author URI:			https://capsula.group/
  * Requires at least:	4.5.0
  * Tested up to:		4.9.4
  *
@@ -34,7 +34,7 @@ Avoori_Product_Social_Sharing();
  * Main Avoori_Product_Social_Sharing Class
  *
  * @class Avoori_Product_Social_Sharing
- * @version	1.0.0
+ * @version	1.0.1
  * @since 1.0.0
  * @package	Avoori_Product_Social_Sharing
  */
@@ -82,7 +82,7 @@ final class Avoori_Product_Social_Sharing {
 		$this->token 				= 'avoo-product-social-sharing';
 		$this->plugin_url 			= plugin_dir_url( __FILE__ );
 		$this->plugin_path 			= plugin_dir_path( __FILE__ );
-		$this->version 				= '1.0.0';
+		$this->version 				= '1.0.1';
 
 		register_activation_hook( __FILE__, array( $this, 'install' ) );
 
@@ -152,17 +152,25 @@ final class Avoori_Product_Social_Sharing {
 		// Include Customizer Helper functions
 		require_once( $this->plugin_path . 'includes/customizer-helper.php' );
 
-		// Register CSS files
-		add_action( 'wp_enqueue_scripts' , array( $this , 'avoo_product_share_load_css' ) );
+		if ( avoo_is_woocommerce_active() ) {
 
-		// Add Customizer options
-		add_action( 'customize_register', array( $this , 'customizer_register' ) );
+			// Register CSS files
+			add_action( 'wp_enqueue_scripts' , array( $this , 'avoo_product_share_load_css' ) );
 
-		// Add buttons to woocommerce products
-		add_action( 'woocommerce_single_product_summary' , 'avoo_add_product_share_buttons' , 45);
+			// Add Customizer options
+			add_action( 'customize_register', array( $this , 'customizer_register' ) );
 
-		// Add meta information
-		add_action( 'wp_footer' , 'avoo_product_share_footer_meta');
+			// Add buttons to woocommerce products
+			add_action( 'woocommerce_single_product_summary' , 'avoo_add_product_share_buttons' , 45);
+
+			// Add meta information
+			add_action( 'wp_footer' , 'avoo_product_share_footer_meta');
+
+		} else {
+
+			add_action( 'admin_notices', 'avoo_admin_notice_woo_not_active' );
+
+		}
 
 	}
 
@@ -203,7 +211,7 @@ final class Avoori_Product_Social_Sharing {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'avoo_product_share_show', array(
-			'label'	   				=> esc_html__( 'Add Product Social Share Buttons', 'avoo-share-products' ),
+			'label'	   				=> esc_html__( 'Enable Social Share Buttons', 'avoo-share-products' ),
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_show',
@@ -220,7 +228,7 @@ final class Avoori_Product_Social_Sharing {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'avoo_product_share_title_show', array(
-			'label'	   				=> esc_html__( 'Add a Title Before The Buttons', 'avoo-share-products' ),
+			'label'	   				=> esc_html__( 'Add Title', 'avoo-share-products' ),
 			'type' 					=> 'checkbox',
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_title_show',
@@ -243,7 +251,7 @@ final class Avoori_Product_Social_Sharing {
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_title',
 			'priority' 				=> 10,
-			'active_callback'		=> 'avoo_product_share_is_enabled',
+			'active_callback'		=> 'avoo_product_share_and_title_is_enabled',
 		) ) );
 
 		/**
@@ -387,7 +395,7 @@ final class Avoori_Product_Social_Sharing {
 			'section'  				=> 'avoo_product_share_section',
 			'settings' 				=> 'avoo_product_share_email_title',
 			'priority' 				=> 10,
-			'active_callback'		=> 'avoo_product_share_is_enabled',
+			'active_callback'		=> 'avoo_product_share_and_email_is_enabled',
 		) ) );
 
 	}
