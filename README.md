@@ -13,6 +13,7 @@ This is a minimal social sharing solution that allows you to automatically inser
   * [Manual](#manual)
 * [Features / Screenshots](#features)
 * [FAQ](#faq)
+* [Professional Version](#professional-version)
 * [Contributing](#contributing)
 * [Modification Examples](#modifications)
   * [How to change the blocks background color with CSS](#how-to-change-the-blocks-background-color-with-css)
@@ -20,7 +21,8 @@ This is a minimal social sharing solution that allows you to automatically inser
   * [How to remove the blocks background and use a border instead with CSS](#how-to-remove-the-blocks-background-and-use-a-border-instead-with-css)
 * [Support](#support)
 * [License](#license)
-* [Professional Version](#professional-version)
+* [Changelog](#changelog)
+
 
 ---
 
@@ -40,6 +42,9 @@ This is a minimal social sharing solution that allows you to automatically inser
 
 ### Features
 
+**Requires at least:** WordPress 4.4  
+**Tested up to:** WordPress 4.9.4  
+**Version tag:** 1.2.7  
 
 ![Recordit GIF](http://g.recordit.co/kWJFgJd4pD.gif)
 
@@ -51,6 +56,29 @@ This is a minimal social sharing solution that allows you to automatically inser
     - Please follow the modification examples.
 - **How can I have more options in the customizer instead of writing more code?**
     - We have a pro version available with many additional settings, please follow the link below.
+
+### Professional Version
+
+The professional version of the plugin adds many more options to the customizer settings:
+* Title Styling:
+  * Title Text Heading (H1,H2,H3)
+  * Title Text Color
+  * Title Text Margins (px)
+* Single background color on hover for all share buttons:
+  * Single Background Hover Color For All Buttons
+* Change default spacing between icons:
+  * Button Margins (px)
+* Share button design options (Settings for each button):
+  * Button Background Color
+  * Button Background Hover Color
+  * Button Border Color
+  * Button Border Hover Color
+  * Button Border Roundness
+  * Button Icon Size
+  * Button Icon Height
+  * Button Icon Color
+
+> The professional version is available <a href="https://capsula.group/plugins/single-product-social-sharing-plugin-for-woocommerce" target="_blank">here</a>
 
 ### Contributing
 
@@ -88,7 +116,8 @@ Additional options and settings are available directly in the customizer in the 
 
 ### Support
 
-If you need any help or you would like to contribute to the project feel free to open an issue and we will try to help.
+If you need any support or have any questions about the project, feel free to to visit our <a href="https://capsula.group/support" target="_blank">support page</a>.
+Please use the github project page for bug reports and contrubutions only.
 You may also reach our development team directly by contacting us in one of following ways:
 
 - Website at <a href="https://capsula.group/plugin_development" target="_blank">capsula.group/plugin_development</a>
@@ -103,28 +132,20 @@ You may also reach our development team directly by contacting us in one of foll
 
 ---
 
+### Changelog
 
-### Professional Version
+#### [1.2.7] :: 28 - Feb - 2018
+##### Added
+- Initial project upload.
 
-The professional version of the plugin adds many more options to the customizer settings:
-* Title Styling:
-  * Title Text Heading (H1,H2,H3)
-  * Title Text Color
-  * Title Text Margins (px)
-* Single background color on hover for all share buttons:
-  * Single Background Hover Color For All Buttons
-* Change default spacing between icons:
-  * Button Margins (px)
-* Share button design options (Settings for each button):
-  * Button Background Color
-  * Button Background Hover Color
-  * Button Border Color
-  * Button Border Hover Color
-  * Button Border Roundness
-  * Button Icon Size
-  * Button Icon Height
-  * Button Icon Color
+##### Changed
+- Changed Readme.
 
-> The professional version is available <a href="https://capsula.group/plugins/single-product-social-sharing-plugin-for-woocommerce" target="_blank">here</a>
+##### Fixed
+- None.
+
+##### Removed
+- Unused social networks from selection.
+
 
 ---
