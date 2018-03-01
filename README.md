@@ -62,7 +62,7 @@ Version tag: 1.0.2
 
 The professional version of the plugin adds many more options to the customizer settings:
 * Title Styling:
-  * Title Text Heading (H1,H2,H3,div,p)
+  * Title Text Size
   * Title Text Color
   * Title Text Margins (px)
 * Single background color on hover for all share buttons:
