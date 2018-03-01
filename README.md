@@ -47,7 +47,7 @@ Tested up to: WordPress 4.9.4
 Version tag: 1.0.2  
 ```
 
-![Recordit GIF](http://g.recordit.co/AsuMVJKPQ0)
+![Recordit GIF](http://g.recordit.co/AsuMVJKPQ0.gif)
 
 ### FAQ
 
