@@ -44,7 +44,7 @@ This is a minimal social sharing solution that allows you to automatically inser
 ```HTML
 Requires at least: WordPress 4.4  
 Tested up to: WordPress 4.9.4
-Version tag: 1.0.1  
+Version tag: 1.0.2  
 ```
 
 ![Recordit GIF](http://g.recordit.co/kWJFgJd4pD.gif)
@@ -135,17 +135,24 @@ You may also reach our development team directly by contacting us in one of foll
 
 ### Changelog
 
-#### [1.0.1] :: 1 - Mar - 2018
+#### [1.0.2] :: 1 - Mar - 2018
 ##### Added
-- Translations
-- Active callback checks
-- WooCommerce active checks
+- Improved support for proffesional version.
 
 ##### Changed
-- Changed front-end texts
+- Changed customizer priority.
+
+#### [1.0.1] :: 1 - Mar - 2018
+##### Added
+- Translations.
+- Active callback checks.
+- WooCommerce active checks.
+
+##### Changed
+- Changed front-end texts.
 
 ##### Fixed
-- Customizer options visibility
+- Customizer options visibility.
 
 #### [1.0.0] :: 28 - Feb - 2018
 ##### Added
