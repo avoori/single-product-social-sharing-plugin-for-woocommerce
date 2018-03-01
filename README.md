@@ -109,23 +109,23 @@ You may also reach our development team directly by contacting us in one of foll
 ### Professional Version
 
 The professional version of the plugin adds many more options to the customizer settings:
-   * Title Styling:
-- Title Text Heading (H1,H2,H3)
-- Title Text Color
-- Title Text Margins (px)
-Single background color on hover for all share buttons:
-- Single Background Hover Color For All Buttons
-Change default spacing between icons:
-- Button Margins (px)
-Share button design options (Settings for each button):
-- Button Background Color
-- Button Background Hover Color
-- Button Border Color
-- Button Border Hover Color
-- Button Border Roundness
-- Button Icon Size
-- Button Icon Height
-- Button Icon Color
+* Title Styling:
+  * Title Text Heading (H1,H2,H3)
+  * Title Text Color
+  * Title Text Margins (px)
+* Single background color on hover for all share buttons:
+  * Single Background Hover Color For All Buttons
+* Change default spacing between icons:
+  * Button Margins (px)
+* Share button design options (Settings for each button):
+  * Button Background Color
+  * Button Background Hover Color
+  * Button Border Color
+  * Button Border Hover Color
+  * Button Border Roundness
+  * Button Icon Size
+  * Button Icon Height
+  * Button Icon Color
 
 > The professional version is available <a href="https://capsula.group/plugins/single-product-social-sharing-plugin-for-woocommerce" target="_blank">here</a>
 
