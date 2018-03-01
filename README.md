@@ -140,13 +140,10 @@ You may also reach our development team directly by contacting us in one of foll
 - Initial project upload.
 
 ##### Changed
-- Changed Readme.
+- Changed project description.
 
 ##### Fixed
 - None.
 
 ##### Removed
 - Unused social networks from selection.
-
-
----
