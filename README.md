@@ -8,8 +8,6 @@ This is a minimal social sharing solution that allows you to automatically inser
 
 ### Table of Contents
 
-> Please follow the table of contents.
-
 * [Installation](#installation)
   * [Automatic](#automatic)
   * [Manual](#manual)
