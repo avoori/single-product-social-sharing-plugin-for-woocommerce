@@ -143,6 +143,8 @@ You may also reach our development team directly by contacting us in one of foll
 ##### Changed
 - Changed customizer priority.
 
+---
+
 ```
 [v1.0.1] ----------> 01 - 03 - 2018
 ```
@@ -157,6 +159,9 @@ You may also reach our development team directly by contacting us in one of foll
 
 ##### Fixed
 - Customizer options visibility.
+
+---
+
 
 ```
 [v1.0.0] ----------> 28 - 02 - 2018
