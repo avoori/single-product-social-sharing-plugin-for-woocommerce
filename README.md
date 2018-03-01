@@ -44,7 +44,7 @@ This is a minimal social sharing solution that allows you to automatically inser
 ```HTML
 Requires at least: WordPress 4.4  
 Tested up to: WordPress 4.9.4
-Version tag: 1.2.7  
+Version tag: 1.0.1  
 ```
 
 ![Recordit GIF](http://g.recordit.co/kWJFgJd4pD.gif)
