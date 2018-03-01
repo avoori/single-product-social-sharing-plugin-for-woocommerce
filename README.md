@@ -1,4 +1,4 @@
-## Single Product Social Sharing Plugin for Woocommerce
+# Single Product Social Sharing Plugin for Woocommerce
 
 This is a minimal social sharing solution that allows you to automatically insert social media sharing buttons at the bottom of your Woocommerce single product summary area. 
 
