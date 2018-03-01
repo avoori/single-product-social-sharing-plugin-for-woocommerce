@@ -13,7 +13,7 @@ This is a minimal social sharing solution that allows you to automatically inser
 * [Installation](#installation)
   * [Automatic](#automatic)
   * [Manual](#manual)
-* [Features/Screenshots](#features)
+* [Features / Screenshots](#features)
 * [FAQ](#faq)
 * [Contributing](#contributing)
 * [Modification Examples](#modifications)
@@ -22,7 +22,7 @@ This is a minimal social sharing solution that allows you to automatically inser
   * [How to remove the blocks background and use a border instead with CSS](#how-to-remove-the-blocks-background-and-use-a-border-instead-with-css)
 * [Support](#support)
 * [License](#license)
-* [Professional Version](#pro-version)
+* [Professional Version](#professional-version)
 
 ---
 
@@ -109,15 +109,15 @@ You may also reach our development team directly by contacting us in one of foll
 ### Professional Version
 
 The professional version of the plugin adds many more options to the customizer settings:
-> Title:
+Title Styling:
 - Title Text Heading (H1,H2,H3)
 - Title Text Color
 - Title Text Margins (px)
-> Single background color on hover for all share buttons:
+Single background color on hover for all share buttons:
 - Single Background Hover Color For All Buttons
-> Change spacing between icons:
+Change default spacing between icons:
 - Button Margins (px)
-> Share button design options (Settings for each button):
+Share button design options (Settings for each button):
 - Button Background Color
 - Button Background Hover Color
 - Button Border Color
