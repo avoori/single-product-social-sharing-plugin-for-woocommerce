@@ -131,9 +131,7 @@ You may also reach our development team directly by contacting us in one of foll
 - This is an open source project under the GPLV3 license. 
 - Feel free to use it on as many projects (personal and commercial) as you would like, contribute, share!
 
----
-
-### Changelog
+## Changelog
 
 #### [1.0.2] :: 1 - Mar - 2018
 ##### Added
