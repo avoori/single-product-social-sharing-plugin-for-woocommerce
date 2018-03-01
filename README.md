@@ -38,7 +38,7 @@ This is a minimal social sharing solution that allows you to automatically inser
 2. Upload the plugin folder into the wp-content/plugins/ directory of your WordPress site.
 3. Go to your Wordpress backend --> Plugins --> Activate Single Product Social Sharing Plugin for Woocommerce
 
-> Single Product Social Sharing Plugin for Woocommerce will add a new customizer section called “Product Social Sharing”. Here you are able to configure all the plugin settings.
+> Single Product Social Sharing Plugin for Woocommerce will add a new customizer section called “Product Social Sharing”. There you are able to configure all the plugin settings.
 
 ### Features
 ```HTML
