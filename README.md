@@ -2,9 +2,9 @@
 
 This is a minimal social sharing solution that allows you to automatically insert social media sharing buttons at the bottom of your Woocommerce single product summary area. 
 
-> <i>Tags: wordpress, wocommerce, social, sharing, simple, customizer, clean, CSS, PHP, avoori, capsula group.</i>
-
 [![INSERT YOUR GRAPHIC HERE](https://image.prntscr.com/image/u0d6bxAgSqS0nCslgZqw2w.png)]()
+
+> <i>Tags: wordpress, wocommerce, social, sharing, simple, customizer, clean, CSS, PHP, avoori, capsula group.</i>
 
 ### Table of Contents
 
