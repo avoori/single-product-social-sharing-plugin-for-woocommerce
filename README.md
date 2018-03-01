@@ -144,9 +144,9 @@ You may also reach our development team directly by contacting us in one of foll
 ##### Changed
 - Changed customizer priority.
 
----
-
-#### [1.0.1] :: 1 - Mar - 2018
+```
+[v1.0.1] ----------> 01 - 03 - 2018
+```
 ##### Added
 - Translations.
 - Active callback checks.
@@ -158,9 +158,9 @@ You may also reach our development team directly by contacting us in one of foll
 ##### Fixed
 - Customizer options visibility.
 
----
-
-#### [1.0.0] :: 28 - Feb - 2018
+```
+[v1.0.0] ----------> 28 - 02 - 2018
+```
 ##### Added
 - Initial project upload.
 
