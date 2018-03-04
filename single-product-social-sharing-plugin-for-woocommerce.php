@@ -3,10 +3,10 @@
  * Plugin Name:			Product Social Share Buttons
  * Plugin URI:			https://capsula.group/plugins/single-product-social-sharing-plugin-for-woocommerce/
  * Description:			Add Social Share buttons for woocommerce products
- * Version:				1.0.2
- * Author:				Capsula Group
- * Author URI:			https://capsula.group/
- * Requires at least:	4.5.0
+ * Version:			1.0.2
+ * Author:			Avoori
+ * Author URI:			https://avoori.com/
+ * Requires at least:		4.5.0
  * Tested up to:		4.9.4
  *
  * Text Domain: avoo-share-products
